@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3F2B3D8A2A20B2F6000D9BFE /* UserRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F2B3D892A20B2F6000D9BFE /* UserRow.swift */; };
+		3F2B3D8F2A20B858000D9BFE /* SideMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F2B3D8E2A20B858000D9BFE /* SideMenuView.swift */; };
+		3F2B3D912A20B869000D9BFE /* SideMenuRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F2B3D902A20B869000D9BFE /* SideMenuRowView.swift */; };
+		3F2B3D932A20B8A3000D9BFE /* SideMenuViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F2B3D922A20B8A3000D9BFE /* SideMenuViewModel.swift */; };
+		3F2B3D952A20BCCC000D9BFE /* UserStatesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F2B3D942A20BCCC000D9BFE /* UserStatesView.swift */; };
 		3FBC6E302A1CC8FC00E7C544 /* TwitterCloneApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FBC6E2F2A1CC8FC00E7C544 /* TwitterCloneApp.swift */; };
 		3FBC6E322A1CC8FC00E7C544 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FBC6E312A1CC8FC00E7C544 /* ContentView.swift */; };
 		3FBC6E342A1CC8FD00E7C544 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3FBC6E332A1CC8FD00E7C544 /* Assets.xcassets */; };
@@ -22,6 +27,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3F2B3D892A20B2F6000D9BFE /* UserRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRow.swift; sourceTree = "<group>"; };
+		3F2B3D8E2A20B858000D9BFE /* SideMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuView.swift; sourceTree = "<group>"; };
+		3F2B3D902A20B869000D9BFE /* SideMenuRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuRowView.swift; sourceTree = "<group>"; };
+		3F2B3D922A20B8A3000D9BFE /* SideMenuViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuViewModel.swift; sourceTree = "<group>"; };
+		3F2B3D942A20BCCC000D9BFE /* UserStatesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserStatesView.swift; sourceTree = "<group>"; };
 		3FBC6E2C2A1CC8FC00E7C544 /* TwitterClone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TwitterClone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3FBC6E2F2A1CC8FC00E7C544 /* TwitterCloneApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwitterCloneApp.swift; sourceTree = "<group>"; };
 		3FBC6E312A1CC8FC00E7C544 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -48,6 +58,56 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3F2B3D862A20B1C9000D9BFE /* View */ = {
+			isa = PBXGroup;
+			children = (
+				3FBC6E572A1CF27700E7C544 /* ExploreView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		3F2B3D872A20B1F8000D9BFE /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		3F2B3D882A20B2DD000D9BFE /* User */ = {
+			isa = PBXGroup;
+			children = (
+				3F2B3D892A20B2F6000D9BFE /* UserRow.swift */,
+				3F2B3D942A20BCCC000D9BFE /* UserStatesView.swift */,
+			);
+			path = User;
+			sourceTree = "<group>";
+		};
+		3F2B3D8B2A20B7DF000D9BFE /* SideMenu */ = {
+			isa = PBXGroup;
+			children = (
+				3F2B3D8C2A20B7F0000D9BFE /* ViewModel */,
+				3F2B3D8D2A20B7FE000D9BFE /* View */,
+			);
+			path = SideMenu;
+			sourceTree = "<group>";
+		};
+		3F2B3D8C2A20B7F0000D9BFE /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				3F2B3D922A20B8A3000D9BFE /* SideMenuViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		3F2B3D8D2A20B7FE000D9BFE /* View */ = {
+			isa = PBXGroup;
+			children = (
+				3F2B3D8E2A20B858000D9BFE /* SideMenuView.swift */,
+				3F2B3D902A20B869000D9BFE /* SideMenuRowView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		3FBC6E232A1CC8FC00E7C544 = {
 			isa = PBXGroup;
 			children = (
@@ -112,6 +172,7 @@
 			isa = PBXGroup;
 			children = (
 				3FBC6E462A1CCA2400E7C544 /* Components */,
+				3F2B3D8B2A20B7DF000D9BFE /* SideMenu */,
 				3FBC6E562A1CF1EF00E7C544 /* Profile */,
 				3FBC6E552A1CF1ED00E7C544 /* Explore */,
 				3FBC6E542A1CF1EB00E7C544 /* Notification */,
@@ -125,6 +186,7 @@
 		3FBC6E462A1CCA2400E7C544 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				3F2B3D882A20B2DD000D9BFE /* User */,
 				3FBC6E4C2A1CD00600E7C544 /* Tweets */,
 			);
 			path = Components;
@@ -189,7 +251,8 @@
 		3FBC6E552A1CF1ED00E7C544 /* Explore */ = {
 			isa = PBXGroup;
 			children = (
-				3FBC6E572A1CF27700E7C544 /* ExploreView.swift */,
+				3F2B3D872A20B1F8000D9BFE /* ViewModel */,
+				3F2B3D862A20B1C9000D9BFE /* View */,
 			);
 			path = Explore;
 			sourceTree = "<group>";
@@ -289,15 +352,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3F2B3D952A20BCCC000D9BFE /* UserStatesView.swift in Sources */,
 				3FBC6E5C2A1CF29C00E7C544 /* MassageView.swift in Sources */,
 				3FBC6E602A1CF59D00E7C544 /* ProfileView.swift in Sources */,
 				3FBC6E322A1CC8FC00E7C544 /* ContentView.swift in Sources */,
+				3F2B3D912A20B869000D9BFE /* SideMenuRowView.swift in Sources */,
 				3FBC6E4E2A1CD03600E7C544 /* TweetRowView.swift in Sources */,
 				3FBC6E622A1D094800E7C544 /* TweetFilterViewModel.swift in Sources */,
 				3FBC6E5A2A1CF28C00E7C544 /* NotificationView.swift in Sources */,
+				3F2B3D8F2A20B858000D9BFE /* SideMenuView.swift in Sources */,
 				3FBC6E4B2A1CCF0400E7C544 /* FeedView.swift in Sources */,
 				3FBC6E302A1CC8FC00E7C544 /* TwitterCloneApp.swift in Sources */,
+				3F2B3D932A20B8A3000D9BFE /* SideMenuViewModel.swift in Sources */,
 				3FBC6E582A1CF27700E7C544 /* ExploreView.swift in Sources */,
+				3F2B3D8A2A20B2F6000D9BFE /* UserRow.swift in Sources */,
 				3FBC6E522A1CF00700E7C544 /* MainTabView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
