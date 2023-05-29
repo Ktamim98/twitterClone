@@ -6,11 +6,18 @@
 //
 
 import SwiftUI
+import Kingfisher
 
 struct ProfileView: View {
     @State private var selectedFilter: TweetFilterViewModel = .tweets
     @Namespace var animation
     @Environment(\.presentationMode) var mode
+    private let user: User
+    
+    init(user: User){
+        self.user = user
+    }
+    
     var body: some View {
         VStack(alignment: .leading){
             headerView
@@ -25,12 +32,13 @@ struct ProfileView: View {
             
             Spacer()
         }
+        .navigationBarHidden(true)
     }
 }
 
 struct ProfileView_Previews: PreviewProvider {
     static var previews: some View {
-        ProfileView()
+        ProfileView(user: User(username: NSUUID().uuidString, fullname: "john wick", profileImageUrl: "", email: "johnwick@gmail.com"))
     }
 }
 extension ProfileView {
@@ -49,9 +57,12 @@ extension ProfileView {
 //                            .offset(x: 16, y: 22)
                 }
                 
-                Circle()
+                KFImage(URL(string: user.profileImageUrl))
+                    .resizable()
+                    .scaledToFill()
+                    .clipShape(Circle())
                     .frame(width: 72, height: 72)
-                .offset(x: 16, y: 24)
+                    .offset(x: 16, y: 24)
             }
         }
         .frame(height: 96)
@@ -82,13 +93,13 @@ extension ProfileView {
     var userInfoDetails: some View{
         VStack(alignment: .leading, spacing: 4){
             HStack{
-                Text("Light Yagami")
+                Text(user.fullname)
                     .font(.title2).bold()
                 
                 Image(systemName: "checkmark.seal.fill")
                     .foregroundColor(Color(.systemBlue))
             }
-            Text("@Kira")
+            Text("@\(user.username)")
                 .font(.subheadline)
                 .foregroundColor(.secondary)
             Text("Let's Make a new World.")
