@@ -13,13 +13,18 @@ struct ContentView: View {
     
     @EnvironmentObject var viewModel: AuthViewModel
     
+    
+
+
     var body: some View {
         Group{
             
             if viewModel.userSession == nil{
                 LoginView()
             }else{
-                mainInterFaceView
+               
+                    mainInterFaceView
+                
             }
         }
     }
@@ -33,31 +38,33 @@ struct ContentView_Previews: PreviewProvider {
 
 
 extension ContentView{
+    
     var mainInterFaceView: some View{
-        ZStack(alignment: .topLeading){
-            MainTabView()
-                .navigationBarHidden(showMenu)
-            
-            
-            if showMenu{
-                ZStack{
-                    Color(.black)
-                        .opacity(showMenu ? 0.25: 0.0)
-                    
-                }.onTapGesture {
-                    withAnimation(.easeInOut){
-                        showMenu = false
+            ZStack(alignment: .topLeading){
+                MainTabView()
+                    .navigationBarHidden(showMenu)
+                
+                
+                if showMenu{
+                    ZStack{
+                        Color(.black)
+                            .opacity(showMenu ? 0.25: 0.0)
+                        
+                    }.onTapGesture {
+                        withAnimation(.easeInOut){
+                            showMenu = false
+                        }
                     }
+                    .ignoresSafeArea()
                 }
-                .ignoresSafeArea()
+                
+                SideMenuView()
+                    .frame(width: 300)
+                    .offset(x: showMenu ? 0 : -300, y: 0)
+                    .background(showMenu ? Color.white : Color.clear)
             }
-            
-            SideMenuView()
-                .frame(width: 300)
-                .offset(x: showMenu ? 0 : -300, y: 0)
-                .background(showMenu ? Color.white : Color.clear)
-        }
-        .navigationTitle("Home")
+        
+        .navigationTitle("Home" )
         .navigationBarTitleDisplayMode(.inline)
         .toolbar{
             ToolbarItem(placement: .navigationBarLeading){

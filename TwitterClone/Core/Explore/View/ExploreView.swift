@@ -11,9 +11,11 @@ struct ExploreView: View {
     
     @ObservedObject var viewModel = ExploreViewmodel()
     
-   
+    
     
     var body: some View {
+        
+       
             VStack{
                 SearchBar(text: $viewModel.searchText)
                     .padding()
@@ -25,19 +27,23 @@ struct ExploreView: View {
                                 ProfileView(user: user)
                             }label: {
                                 UserRow(user: user)
-                               
-
+                                
+                                
                             }
                             
                         }
                     }
                 }
             }
-            .navigationTitle("Explore")
-            .navigationBarTitleDisplayMode(.inline)
+                
+                .navigationTitle("Explore")
+                .navigationBarTitleDisplayMode(.inline)
+            
+            
+        }
         
     }
-}
+
 
 struct ExploreView_Previews: PreviewProvider {
     static var previews: some View {
